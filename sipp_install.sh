@@ -20,9 +20,9 @@
 set -eu -o pipefail 
 
 sudo -n true
-test $? -eq 0 || exit 1 "ýou need sudo privilleges to run this"
+test $? -eq 0 || exit 1 "You need sudo privilleges to run this!"
 
-echo !!! Performaing a package update. !!! 
+echo !!! Performing a package update. !!! 
 
 sudo apt-get update 
 
@@ -47,7 +47,6 @@ EOF
 
 echo !!! Obtaining sipp source file. !!!
 sudo wget https://downloads.sourceforge.net/project/sipp/sipp/3.3/sipp-3.3.tar.gz -P /tmp
-
 
 echo !!! Untarring to /opt/sipp3-3 !!!
 tar -xzvf /tmp/sipp-3.3.tar.gz --directory /opt
